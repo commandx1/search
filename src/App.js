@@ -19,7 +19,7 @@ function App() {
     if (newValue.length > 1) {
       try {
         const responseData = await sendRequest(
-          "http://byno.wawlabs.com/avx_wse?q=" + newValue
+          "https://byno.wawlabs.com/avx_wse?q=" + newValue
         );
         console.log(responseData);
         setResults(responseData);
