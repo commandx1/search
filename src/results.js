@@ -17,8 +17,18 @@ const Results = ({ results }) => {
             <div className="d-flex flex-column">
               <p className="mb-0">{r.name}</p>
               <div className="d-flex align-items-center">
-                <span className="newPrice">{r.price_new}</span>
-                <span className="oldPrice">{r.price_old}</span>
+                <span className="newPrice">
+                  {r.price_new > 0 &&
+                    r.price_new !== "" &&
+                    r.price_new !== null &&
+                    r.price_new.toFixed(2) + " TL"}
+                </span>
+                <span className="oldPrice">
+                  {r.price_old > 0 &&
+                    r.price_new !== "" &&
+                    r.price_new !== null &&
+                    r.price_old.toFixed(2) + " TL"}
+                </span>
               </div>
             </div>
             <div style={{ flex: 1 }}></div>
